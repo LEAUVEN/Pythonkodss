@@ -454,12 +454,3 @@
 #---------------------------- # -----------------------------# SORTED AND LAMBDA #---------------------------- # -----------------------------# 
 # tuple1=((1,'a'),(4,'c'),(3,'b'),(2,'d'))
 # sorted(tuple1,key= lambda x:x[1])
-#---------------------------- # -----------------------------# SAYI ADETİ VE LİSTE OLARAK ALINAN SAYILARIN MEDYAN MOD VE TEKRAR BULMA #---------------------------- # -----------------------------# 
-# import numpy as np
-# from scipy import stats
-
-# size = int(input())
-# numbers = list(map(int, input().split()))
-# print(np.mean(numbers))
-# print(np.median(numbers))
-# print(int(stats.mode(numbers)[0]))
