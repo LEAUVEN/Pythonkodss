@@ -454,3 +454,84 @@
 #---------------------------- # -----------------------------# SORTED AND LAMBDA #---------------------------- # -----------------------------# 
 # tuple1=((1,'a'),(4,'c'),(3,'b'),(2,'d'))
 # sorted(tuple1,key= lambda x:x[1])
+
+#---------------------------- # ---------------------------- #---------------------------- # -----------------------------# 
+# Uc basamaklı,rakamlarının 3.kuvvetlerinin toplamları aynı sayıyı veren sayılar.
+i=100
+while i<999:
+    i=str(i)
+    a=i[0]
+    b=i[1]
+    c=i[2]
+    toplam=0
+    toplam=toplam+(int(a)**3)+(int(b)**3)+(int(c)**3)
+    if toplam==int(i):
+        print(i)
+    i=int(i)
+    i=i+1
+#---------------------------- # -----------------------------# ATM #---------------------------- # -----------------------------# 
+Girilen miktarin karşılığı olarak maximum değerde verilecek paraların sayısı
+Paralar = 100,50,20,10
+Para_miktari=str(input('Para miktarını giriniz: '))
+yuz_tl=1
+Elli_tl=0
+yirmi_tl=0
+on_tl=0
+uzunluk=len(Para_miktari)
+if uzunluk==4:
+    yuz_tl=yuz_tl*int((Para_miktari[uzunluk-3]))+(10*(int(Para_miktari[uzunluk-4])))
+elif uzunluk==5:
+    yuz_tl=yuz_tl*int((Para_miktari[uzunluk-3]))+(10*(int(Para_miktari[uzunluk-4])))+(100*(int(Para_miktari[uzunluk-5])))
+elif uzunluk==6:
+    yuz_tl=yuz_tl*int((Para_miktari[uzunluk-3]))+(10*(int(Para_miktari[uzunluk-4])))+(100*(int(Para_miktari[uzunluk-5])))+(1000*(int(Para_miktari[uzunluk-6])))
+elif uzunluk==7:
+    yuz_tl=yuz_tl*int((Para_miktari[uzunluk-3]))+(10*(int(Para_miktari[uzunluk-4])))+(100*(int(Para_miktari[uzunluk-5])))+(1000*(int(Para_miktari[uzunluk-6])))+(10000*(int(Para_miktari[uzunluk-7])))
+
+if int(Para_miktari[-2])==9:    
+    Elli_tl=Elli_tl+1
+    yirmi_tl=yirmi_tl+2    
+    
+elif int(Para_miktari[-2])==8:    
+    Elli_tl=Elli_tl+1
+    yirmi_tl=yirmi_tl+1
+    on_tl=on_tl+1
+    
+elif int(Para_miktari[-2])==7:    
+    Elli_tl=Elli_tl+1
+    yirmi_tl=yirmi_tl+1 
+    
+elif int(Para_miktari[-2])==6:    
+    Elli_tl=Elli_tl+1
+    on_tl=on_tl+1
+elif int(Para_miktari[-2])==5:
+    
+    Elli_tl=Elli_tl+1
+elif int(Para_miktari[-2])==4:
+    
+    yirmi_tl=yirmi_tl+2
+elif int(Para_miktari[-2])==3:
+    
+    yirmi_tl=yirmi_tl+1
+    on_tl=on_tl+1
+elif int(Para_miktari[-2])==2:
+    
+    yirmi_tl=yirmi_tl+1
+elif int(Para_miktari[-2])==1:
+    
+    on_tl=on_tl+1
+print('Toplam Yüz tl miktari: {} ,'.format(yuz_tl)+' Toplam Elli Tl miktari: {} ,'.format(Elli_tl)+' Toplam Yirmi tl miktari: {} ,'.format(yirmi_tl)+' Toplam On tl miktari: {}'.format(on_tl))
+
+
+#---------------------------- # -----------------------------# Sayfa Problemi #---------------------------- # -----------------------------#
+Sayfa sayısı,ilk gün ve günlük artış miktarına göre toplam kaç günde x sayfa sayısına ait kitap biter.
+
+toplam_sayfa=int(input("Toplam sayfa sayısını giriniz : "))
+i=int(input('İlk gün kaç sayfa okuyacağını giriniz: '))
+art=int(input('Her gün için kaç sayfa daha fazla okuyacağını giriniz:'))
+toplam=0
+gun_hesaplayıcı=1
+while toplam <=toplam_sayfa:
+    toplam=toplam+i+art
+    i=i+art
+    gun_hesaplayıcı=gun_hesaplayıcı+1
+print(gun_hesaplayıcı, "günde kitap bitmiş olacaktır.")
