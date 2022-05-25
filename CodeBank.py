@@ -535,3 +535,14 @@ while toplam <=toplam_sayfa:
     i=i+art
     gun_hesaplayıcı=gun_hesaplayıcı+1
 print(gun_hesaplayıcı, "günde kitap bitmiş olacaktır.")
+#---------------------------- # -----------------------------# string içerisinde harf sayıcı #---------------------------- # -----------------------------#
+def VowelCount(strParam):
+  count=0
+  count=count+strParam.count('a')
+  count=count+strParam.count('e')
+  count=count+strParam.count('o')
+  count=count+strParam.count('u')
+  count=count+strParam.count('i')
+  return count
+  
+print(VowelCount(input()))
